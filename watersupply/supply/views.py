@@ -59,3 +59,8 @@ def login_view(request):
 
     # If the request method is not POST (e.g., GET), render the login page template
     return render(request, 'login.html')
+
+
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
