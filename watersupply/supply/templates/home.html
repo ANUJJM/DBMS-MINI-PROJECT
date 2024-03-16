@@ -92,5 +92,15 @@
         </ul>
     </div>
     <!-- Other content goes here -->
+    {% if user.is_authenticated %}
+            <div class="cart-icon">
+                <a href="{% url 'cart' %}" class="view-cart-link">
+                    <img src="{% static 'images/cart.png' %}" alt="Cart">
+                </a>
+                {% if cart_count == 0 %}
+                <span></span>
+                {% else %}
+                <span class="cart-count">{{ cart_count }}</span>
+                {% endif %}
 </body>
 </html>
