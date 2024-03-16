@@ -22,7 +22,7 @@ urlpatterns = [
     path('cart/', view_cart, name='cart'),
     path('increase-cart-item/<int:product_id>/', increase_cart_item, name='increase-cart-item'),
     path('decrease-cart-item/<int:product_id>/', decrease_cart_item, name='decrease-cart-item'),
-    path('fetch-cart-count/', fetch_cart_count, name='fetch-cart-count'),
+    path('fetch-cart-count/', fetch_cart_count, name='fetch-cart-count')
       # Ensure the name is 'company_products'
     # Example pattern
     # Add more URL patterns here as needed
